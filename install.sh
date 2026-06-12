@@ -32,8 +32,8 @@ echo "Installing vim"
 mkdir -p $HOME/.vim/pack/plugins/start
 #mkdir -p $HOME/.vim/colors
 
-ln -sf ${DIR}/vim/vimrc ${HOME}/.vimrc
-ln -sf ${DIR}/vim/colour ${HOME}/.vim/colors
+ln -sfn ${DIR}/vim/vimrc ${HOME}/.vimrc
+ln -sfn ${DIR}/vim/colour ${HOME}/.vim/colors
 
 cd ~/.vim/pack/plugins/start
 
@@ -46,8 +46,8 @@ echo "Installing sway"
 
 mkdir -p ${HOME}/.config/
 
-ln -sf ${DIR}/sway ${HOME}/.config/sway
-ln -sf ${DIR}/Background ${HOME}/Background
+ln -sfn ${DIR}/sway ${HOME}/.config/sway
+ln -sfn ${DIR}/Background ${HOME}/Background
 
 echo "Building screen-freeze"
 
