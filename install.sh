@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+#set -euo pipefail
 
 clone() {
 
@@ -49,12 +49,26 @@ mkdir -p ${HOME}/.config/
 ln -sf ${DIR}/sway ${HOME}/.config/sway
 ln -sf ${DIR}/Background ${HOME}/Background
 
-mkdir -p ${HOME}/bin/
-cd ${HOME}/bin/
+echo "Building screen-freeze"
 
-git clone --recursive https://github.com/Cynthion21x/screen-freeze.git
+mkdir -p ./temp/
+cd ./temp/
+
+if [ -d ./screen-freeze ]; then
+    echo "screen-freeze exists"
+    git pull
+else
+    git clone --recursive https://github.com/Cynthion21x/screen-freeze.git
+fi
+
 cd screen-freeze
 ./build.sh
+
+mkdir -p ${HOME}/bin/
+
+cp ./bin/screen-freeze ${HOME}/bin/screen-freeze
+
+echo "Build complete"
 
 cd ${DIR}
 
