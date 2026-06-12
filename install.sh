@@ -42,4 +42,20 @@ clone https://github.com/mg979/vim-visual-multi.git
 
 cd ${DIR}
 
+echo "Installing sway"
+
+mkdir -p ${HOME}/.config/
+
+ln -sf ${DIR}/sway ${HOME}/.config/sway
+ln -sf ${DIR}/Background ${HOME}/Background
+
+mkdir -p ${HOME}/bin/
+cd ${HOME}/bin/
+
+git clone --recursive https://github.com/Cynthion21x/screen-freeze.git
+cd screen-freeze
+./build.sh
+
+cd ${DIR}
+
 echo "Done :)"
