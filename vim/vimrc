@@ -1,0 +1,16 @@
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set incsearch
+
+syntax on
+
+let g:vimexplorer_show_hidden = 1
+let g:vimexplorer_show_header = 0
+
+colorscheme custom
+
+command! Ex VimExplorer
+
+nnoremap <Esc> :noh<CR>
