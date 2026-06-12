@@ -121,8 +121,8 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ t
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-bindsym Print exec grim - | ~/bin/screen-freeze/ | wl-copy
-bindsym $mod+e exec grim - | ~/bin/screen-freeze/ -z
+bindsym Print exec grim - | ~/bin/screen-freeze | wl-copy
+bindsym $mod+e exec grim - | ~/bin/screen-freeze -z
 
 # Status Bar
 bar {
