@@ -23,9 +23,6 @@ DIR=$(pwd)
 
 echo "Installing"
 
-git config --global user.name "cynthion"
-git config --global user.email "cynth@cynthion21x.co.uk"
-
 echo "Installing vim"
 
 # vim config
