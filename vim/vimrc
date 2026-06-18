@@ -12,5 +12,3 @@ let g:vimexplorer_show_header = 0
 colorscheme custom
 
 command! Ex VimExplorer
-
-nnoremap <Esc> :noh<CR>

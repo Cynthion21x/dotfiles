@@ -1,0 +1,49 @@
+general {
+    interval = 5
+    output_format = "i3bar"
+}
+
+order += "volume master"
+order += "memory"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "tztime local"
+
+volume master {
+    format = "VOL: %volume"
+    format_muted = "VOL: muted"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+battery all {
+    format = "BAT: %status %percentage %remaining"
+    format_down = "BAT: none"
+    status_chr = "CHR"
+    status_bat = "BAT"
+    status_full = "FULL"
+    low_threshold = 15
+    threshold_type = percentage
+}
+
+memory {
+    format = "MEM: %available (%used) / %total"
+    threshold_degraded = "10%"
+    threshold_critical = "5%"
+}
+
+wireless _first_ {
+    format_up = "W: %essid %quality"
+    format_down = "W: down"
+}
+
+ethernet _first_ {
+    format_up = "E: %essid %quality"
+    format_down = "E: down"
+}
+
+tztime local {
+    format = "%a %d %b  %H:%M"
+}

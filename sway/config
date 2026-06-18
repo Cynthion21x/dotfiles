@@ -85,13 +85,14 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # Window Management
 floating_modifier $mod normal
 
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle sp
+#bindsym $mod+e layout toggle sp
 
 bindsym $mod+f fullscreen toggle
 
 bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
 
 mode "resize" {
     # left will shrink the containers width

@@ -46,6 +46,14 @@ mkdir -p ${HOME}/.config/
 ln -sfn ${DIR}/sway ${HOME}/.config/sway
 ln -sfn ${DIR}/Background ${HOME}/Background
 
+echo "Installing i3status"
+
+ln -sfn ${DIR}/i3status ${HOME}/.config/i3status
+
+echo "Installing foot"
+
+ln -sfn ${DIR}/foot ${HOME}/.config/foot
+
 echo "Building screen-freeze"
 
 mkdir -p ./temp/
