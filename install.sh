@@ -54,6 +54,10 @@ echo "Installing foot"
 
 ln -sfn ${DIR}/foot ${HOME}/.config/foot
 
+echo "Install ghci conf"
+
+ln -sfn ${DIR}/ghci/.ghci ${HOME}/.ghci
+
 echo "Building screen-freeze"
 
 mkdir -p ./temp/
