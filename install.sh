@@ -36,6 +36,8 @@ cd ~/.vim/pack/plugins/start
 
 clone https://github.com/Cynthion21x/VimExplorer.git
 clone https://github.com/mg979/vim-visual-multi.git
+clone https://github.com/kien/rainbow_parentheses.vim.git
+clone https://github.com/vim-polyglot/vim-polyglot.git
 
 cd ${DIR}
 
@@ -58,26 +60,9 @@ echo "Install ghci conf"
 
 ln -sfn ${DIR}/ghci/.ghci ${HOME}/.ghci
 
-echo "Building screen-freeze"
+echo "Install tmux config"
 
-mkdir -p ./temp/
-cd ./temp/
-
-if [ -d ./screen-freeze ]; then
-    echo "screen-freeze exists"
-    git pull
-else
-    git clone --recursive https://github.com/Cynthion21x/screen-freeze.git
-fi
-
-cd screen-freeze
-./build.sh
-
-mkdir -p ${HOME}/bin/
-
-cp ./bin/screen-freeze ${HOME}/bin/screen-freeze
-
-echo "Build complete"
+ln -sfn ${DIR}/tmux/.tmux.conf ${HOME}/.tmux.conf
 
 cd ${DIR}
 

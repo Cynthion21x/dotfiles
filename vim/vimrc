@@ -9,6 +9,14 @@ syntax on
 let g:vimexplorer_show_hidden = 1
 let g:vimexplorer_show_header = 0
 
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 colorscheme custom
 
 command! Ex VimExplorer
