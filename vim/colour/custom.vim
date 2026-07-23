@@ -11,109 +11,109 @@ if exists("syntax_on")
 endif
 
 set background=dark
+set notermguicolors
 
 " UI
 
-hi Normal           guifg=#aaaaaa  guibg=#000000  ctermfg=7    ctermbg=0   gui=none      cterm=none
-hi NormalNC         guifg=#555555  guibg=#000000  ctermfg=8    ctermbg=0   gui=none      cterm=none
+hi Normal           ctermfg=15  ctermbg=NONE  cterm=none
+hi NormalNC         ctermfg=8   ctermbg=NONE  cterm=none
 
-hi CursorLine       guifg=NONE     guibg=#111111  ctermfg=NONE ctermbg=0   gui=none      cterm=underline
-hi CursorColumn     guifg=NONE     guibg=#111111  ctermfg=NONE ctermbg=0   gui=none      cterm=none
-hi CursorLineNr     guifg=#00ff8c  guibg=#000000  ctermfg=10   ctermbg=0   gui=bold      cterm=bold
-hi LineNr           guifg=#555555  guibg=#000000  ctermfg=8    ctermbg=0   gui=none      cterm=none
-hi ColorColumn      guifg=NONE     guibg=#111111  ctermfg=NONE ctermbg=0   gui=none      cterm=none
-hi SignColumn       guifg=#555555  guibg=#000000  ctermfg=8    ctermbg=0   gui=none      cterm=none
+hi CursorLine       ctermfg=NONE  ctermbg=0   cterm=none
+hi CursorColumn     ctermfg=NONE  ctermbg=0   cterm=none
+hi CursorLineNr     ctermfg=11  ctermbg=0     cterm=bold
+hi LineNr           ctermfg=8   ctermbg=NONE  cterm=none
+hi ColorColumn      ctermfg=NONE  ctermbg=0   cterm=none
+hi SignColumn       ctermfg=8   ctermbg=NONE  cterm=none
 
-hi TabLine          guifg=#555555  guibg=#000000  ctermfg=8    ctermbg=0   gui=none      cterm=none
-hi TabLineSel       guifg=#ffffff  guibg=#000000  ctermfg=15   ctermbg=0   gui=bold      cterm=bold
-hi TabLineFill      guifg=NONE     guibg=#000000  ctermfg=NONE ctermbg=0   gui=none      cterm=none
+hi TabLine          ctermfg=8   ctermbg=0     cterm=none
+hi TabLineSel       ctermfg=15  ctermbg=0     cterm=bold
+hi TabLineFill      ctermfg=NONE  ctermbg=0   cterm=none
 
-hi Pmenu            guifg=#aaaaaa  guibg=#111111  ctermfg=7    ctermbg=8   gui=none      cterm=none
-hi PmenuSel         guifg=#000000  guibg=#00ff8c  ctermfg=0    ctermbg=10  gui=bold      cterm=bold
-hi PmenuSbar        guifg=NONE     guibg=#111111  ctermfg=NONE ctermbg=8   gui=none      cterm=none
-hi PmenuThumb       guifg=NONE     guibg=#555555  ctermfg=NONE ctermbg=8   gui=none      cterm=none
+hi Pmenu            ctermfg=7   ctermbg=0     cterm=none
+hi PmenuSel         ctermfg=0   ctermbg=11    cterm=bold
+hi PmenuSbar        ctermfg=NONE  ctermbg=0   cterm=none
+hi PmenuThumb       ctermfg=NONE  ctermbg=8   cterm=none
 
-hi Visual           guifg=NONE     guibg=#1a1a1a  ctermfg=NONE ctermbg=8   gui=none      cterm=reverse
-hi VisualNOS        guifg=NONE     guibg=#1a1a1a  ctermfg=NONE ctermbg=8   gui=none      cterm=reverse
+hi Visual           ctermfg=NONE  ctermbg=8   cterm=none
+hi VisualNOS        ctermfg=NONE  ctermbg=8   cterm=none
 
-hi Search           guifg=#000000  guibg=#ffff55  ctermfg=0    ctermbg=11  gui=bold      cterm=bold
-hi IncSearch        guifg=#000000  guibg=#00ff8c  ctermfg=0    ctermbg=10  gui=bold      cterm=bold
-hi CurSearch        guifg=#000000  guibg=#00ff8c  ctermfg=0    ctermbg=10  gui=bold      cterm=bold
+hi Search           ctermfg=0   ctermbg=11    cterm=bold
+hi IncSearch        ctermfg=0   ctermbg=10    cterm=bold
+hi CurSearch        ctermfg=0   ctermbg=10    cterm=bold
 
-hi MatchParen       guifg=#00ff8c  guibg=NONE     ctermfg=10   ctermbg=NONE gui=bold,underline cterm=bold,underline
+hi MatchParen       ctermfg=11  ctermbg=NONE  cterm=bold,underline
 
-hi Directory        guifg=#00c3ff  guibg=NONE     ctermfg=6    ctermbg=NONE gui=none      cterm=none
-hi Title            guifg=#ffffff  guibg=NONE     ctermfg=15   ctermbg=NONE gui=bold      cterm=bold
-hi Question         guifg=#00ff00  guibg=NONE     ctermfg=2    ctermbg=NONE gui=none      cterm=none
-hi MoreMsg          guifg=#00ff00  guibg=NONE     ctermfg=2    ctermbg=NONE gui=none      cterm=none
-hi ModeMsg          guifg=#ffffff  guibg=NONE     ctermfg=15   ctermbg=NONE gui=bold      cterm=bold
-hi WarningMsg       guifg=#ffff55  guibg=NONE     ctermfg=11   ctermbg=NONE gui=none      cterm=none
-hi ErrorMsg         guifg=#ff5555  guibg=NONE     ctermfg=9    ctermbg=NONE gui=bold      cterm=bold
+hi Directory        ctermfg=12  ctermbg=NONE  cterm=none
+hi Title            ctermfg=15  ctermbg=NONE  cterm=bold
+hi Question         ctermfg=10  ctermbg=NONE  cterm=none
+hi MoreMsg          ctermfg=10  ctermbg=NONE  cterm=none
+hi ModeMsg          ctermfg=15  ctermbg=NONE  cterm=bold
+hi WarningMsg       ctermfg=6   ctermbg=NONE  cterm=none
+hi ErrorMsg         ctermfg=9   ctermbg=NONE  cterm=bold
 
-hi NonText          guifg=#555555  guibg=NONE     ctermfg=8    ctermbg=NONE gui=none      cterm=none
-hi SpecialKey       guifg=#55ffff  guibg=NONE     ctermfg=14   ctermbg=NONE gui=none      cterm=none
-hi EndOfBuffer      guifg=#555555  guibg=NONE     ctermfg=8    ctermbg=NONE gui=none      cterm=none
+hi NonText          ctermfg=8   ctermbg=NONE  cterm=none
+hi SpecialKey       ctermfg=13  ctermbg=NONE  cterm=none
+hi EndOfBuffer      ctermfg=8   ctermbg=NONE  cterm=none
 
-hi Folded           guifg=#555555  guibg=#000000  ctermfg=8    ctermbg=0   gui=italic    cterm=none
-hi FoldColumn       guifg=#555555  guibg=#000000  ctermfg=8    ctermbg=0   gui=none      cterm=none
+hi Folded           ctermfg=8   ctermbg=0     cterm=none
+hi FoldColumn       ctermfg=8   ctermbg=NONE  cterm=none
 
-hi WildMenu         guifg=#000000  guibg=#00ff8c  ctermfg=0    ctermbg=10  gui=bold      cterm=bold
+hi WildMenu         ctermfg=0   ctermbg=11    cterm=bold
 
-hi SpellBad         guifg=NONE     guibg=NONE     gui=undercurl guisp=#ff5555  cterm=underline
-hi SpellCap         guifg=NONE     guibg=NONE     gui=undercurl guisp=#ffff55  cterm=underline
-hi SpellRare        guifg=NONE     guibg=NONE     gui=undercurl guisp=#55ffff  cterm=underline
-hi SpellLocal       guifg=NONE     guibg=NONE     gui=undercurl guisp=#00c3ff  cterm=underline
+hi SpellBad         ctermfg=9   ctermbg=NONE  cterm=underline
+hi SpellCap         ctermfg=11  ctermbg=NONE  cterm=underline
+hi SpellRare        ctermfg=13  ctermbg=NONE  cterm=underline
+hi SpellLocal       ctermfg=12  ctermbg=NONE  cterm=underline
 
 " Syntax
 
-hi Comment          guifg=#555555  ctermfg=8   gui=italic  cterm=none
+hi Comment          ctermfg=6   cterm=italic
 
-hi Constant         guifg=#ffff55  ctermfg=11  gui=none    cterm=none
-hi String           guifg=#ffff55  ctermfg=11  gui=none    cterm=none
-hi Character        guifg=#ffff55  ctermfg=11  gui=none    cterm=none
-hi Number           guifg=#ffff55  ctermfg=11  gui=none    cterm=none
-hi Boolean          guifg=#ffff55  ctermfg=11  gui=bold    cterm=bold
-hi Float            guifg=#ffff55  ctermfg=11  gui=none    cterm=none
+hi Constant         ctermfg=13  cterm=none
+hi String           ctermfg=10  cterm=none
+hi Character        ctermfg=10  cterm=none
+hi Number           ctermfg=13  cterm=none
+hi Boolean          ctermfg=13  cterm=bold
+hi Float            ctermfg=13  cterm=none
 
-hi Identifier       guifg=#aaaaaa  ctermfg=7   gui=none    cterm=none
-hi Function         guifg=#00ff8c  ctermfg=10  gui=none    cterm=none
+hi Identifier       ctermfg=15  cterm=none
+hi Function         ctermfg=12  cterm=none
 
-hi Statement        guifg=#00ff00  ctermfg=2   gui=bold    cterm=bold
-hi Conditional      guifg=#00ff00  ctermfg=2   gui=bold    cterm=bold
-hi Repeat           guifg=#00ff00  ctermfg=2   gui=bold    cterm=bold
-hi Label            guifg=#00ff00  ctermfg=2   gui=none    cterm=none
-hi Operator         guifg=#aaaaaa  ctermfg=7   gui=none    cterm=none
-hi Keyword          guifg=#00ff00  ctermfg=2   gui=bold    cterm=bold
-hi Exception        guifg=#ff5555  ctermfg=9   gui=bold    cterm=bold
+hi Statement        ctermfg=11  cterm=bold
+hi Conditional      ctermfg=11  cterm=bold
+hi Repeat           ctermfg=11  cterm=bold
+hi Label            ctermfg=11  cterm=none
+hi Operator         ctermfg=15  cterm=none
+hi Keyword          ctermfg=11  cterm=bold
+hi Exception        ctermfg=9   cterm=bold
 
-hi PreProc          guifg=#ff55ff  ctermfg=13  gui=none    cterm=none
-hi Include          guifg=#ff55ff  ctermfg=13  gui=none    cterm=none
-hi Define           guifg=#ff55ff  ctermfg=13  gui=none    cterm=none
-hi Macro            guifg=#ff55ff  ctermfg=13  gui=none    cterm=none
-hi PreCondit        guifg=#ff55ff  ctermfg=13  gui=bold    cterm=bold
+hi PreProc          ctermfg=13  cterm=none
+hi Include          ctermfg=11  cterm=bold
+hi Define           ctermfg=13  cterm=none
+hi Macro            ctermfg=13  cterm=none
+hi PreCondit        ctermfg=13  cterm=bold
 
-hi Type             guifg=#00c3ff  ctermfg=6   gui=none    cterm=none
-hi StorageClass     guifg=#00c3ff  ctermfg=6   gui=none    cterm=none
-hi Structure        guifg=#00c3ff  ctermfg=6   gui=bold    cterm=bold
-hi Typedef          guifg=#00c3ff  ctermfg=6   gui=none    cterm=none
+hi Type             ctermfg=7   cterm=none
+hi StorageClass     ctermfg=7   cterm=none
+hi Structure        ctermfg=7   cterm=bold
+hi Typedef          ctermfg=7   cterm=none
 
-hi Special          guifg=#55ffff  ctermfg=14  gui=none    cterm=none
-hi SpecialChar      guifg=#55ffff  ctermfg=14  gui=none    cterm=none
-hi Tag              guifg=#55ffff  ctermfg=14  gui=none    cterm=none
-hi Delimiter        guifg=#aaaaaa  ctermfg=7   gui=none    cterm=none
-hi SpecialComment   guifg=#555555  ctermfg=8   gui=italic  cterm=none
-hi Debug            guifg=#ff5555  ctermfg=9   gui=none    cterm=none
+hi Special          ctermfg=13  cterm=none
+hi SpecialChar      ctermfg=13  cterm=none
+hi Tag              ctermfg=13  cterm=none
+hi Delimiter        ctermfg=15  cterm=none
+hi SpecialComment   ctermfg=6   cterm=italic
+hi Debug            ctermfg=9   cterm=none
 
-hi Underlined       guifg=#aaaaaa  ctermfg=7   gui=underline cterm=underline
-hi Ignore           guifg=#555555  ctermfg=8   gui=none    cterm=none
-hi Error            guifg=#ff5555  guibg=NONE  ctermfg=9   gui=bold    cterm=bold
-hi Todo             guifg=#000000  guibg=#ffff55 ctermfg=0 ctermbg=11  gui=bold  cterm=bold
+hi Underlined       ctermfg=15  cterm=underline
+hi Ignore           ctermfg=8   cterm=none
+hi Error            ctermfg=9   ctermbg=NONE  cterm=bold
+hi Todo             ctermfg=0   ctermbg=11    cterm=bold
 
-
-hi DiffAdd          guifg=#00ff8c  guibg=NONE  ctermfg=10  ctermbg=NONE  gui=none  cterm=none
-hi DiffDelete       guifg=#ff5555  guibg=NONE  ctermfg=9   ctermbg=NONE  gui=none  cterm=none
-hi DiffChange       guifg=#ffff55  guibg=NONE  ctermfg=11  ctermbg=NONE  gui=none  cterm=none
-hi DiffText         guifg=#000000  guibg=#ffff55 ctermfg=0 ctermbg=11    gui=bold  cterm=bold
+hi DiffAdd          ctermfg=10  ctermbg=NONE  cterm=none
+hi DiffDelete       ctermfg=9   ctermbg=NONE  cterm=none
+hi DiffChange       ctermfg=11  ctermbg=NONE  cterm=none
+hi DiffText         ctermfg=0   ctermbg=11    cterm=bold
 
 " C
 
@@ -203,4 +203,3 @@ hi link fortranContinueMark     Special
 hi link fortranLabelNumber      Special
 hi link fortranComment          Comment
 hi link fortranPreProc          PreProc
-hi link fortranInclude          Include
