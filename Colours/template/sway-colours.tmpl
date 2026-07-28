@@ -1,0 +1,42 @@
+set $bg       #${BG}
+set $fg       #${FG}
+set $accent   #${ACCENT}
+set $accentd  #${ACCENT_DARK}
+set $accent2  #${ACCENT}
+set $accent2d #${ACCENT2_DARK}
+set $color0   #${COLOR0}
+set $color1   #${COLOR1}
+set $color2   #${COLOR2}
+set $color3   #${COLOR3}
+set $color4   #${COLOR4}
+set $color5   #${COLOR5}
+set $color6   #${COLOR6}
+set $color7   #${COLOR7}
+set $color8   #${COLOR8}
+set $color9   #${COLOR9}
+set $color10  #${COLOR10}
+set $color11  #${COLOR11}
+set $color12  #${COLOR12}
+set $color13  #${COLOR13}
+set $color14  #${COLOR14}
+set $color15  #${COLOR15}
+
+# class                  border    backgr.   text     indicator  child_border
+client.focused           $accent   $accent   $bg      $accent2   $accent
+client.focused_inactive  $color0   $color0   $fg      $color0    $color8
+client.unfocused         $bg       $bg       $fg      $color0    $color0
+client.urgent            $accent2d $accent2d $bg      $accent2   $accent2
+
+bar {
+    position bottom
+    status_command i3status
+    colors {
+        background         $bg
+        statusline         $fg
+        separator          $color8
+        focused_workspace  $accent  $accent  $bg
+        active_workspace   $color0  $color0  $fg
+        inactive_workspace $color0  $color0  $color8
+        urgent_workspace   $accent2 $accent2 $bg
+    }
+}

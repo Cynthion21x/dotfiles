@@ -22,4 +22,10 @@ let g:rbpt_loadcmd_toggle = 0
 
 colorscheme custom
 
+set noswapfile
+set autoread
+
+set wildmenu
+set wildmode=longest:full,full
+
 command! Ex VimExplorer

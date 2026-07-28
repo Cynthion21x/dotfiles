@@ -29,7 +29,7 @@ battery all {
 }
 
 memory {
-    format = "MEM: %available (%used) / %total"
+    format = "MEM: %available / %total"
     threshold_degraded = "10%"
     threshold_critical = "5%"
 }

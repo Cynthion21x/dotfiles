@@ -2,23 +2,6 @@
 
 #set -euo pipefail
 
-clone() {
-
-    local repo="$1"
-
-    local name="${repo##*/}"
-    name="${name%.git}"
-
-    if [ -d "$(pwd)/${name}" ]; then
-        echo "$name already exists"
-        cd ./${name}
-        git pull
-        cd ..
-    else
-        git clone "$repo"
-    fi
-}
-
 DIR=$(pwd)
 
 echo "Installing"
@@ -26,18 +9,9 @@ echo "Installing"
 echo "Installing vim"
 
 # vim config
-mkdir -p $HOME/.vim/pack/plugins/start
-#mkdir -p $HOME/.vim/colors
 
+ln -sfn ${DIR}/vim ${HOME}/.vim
 ln -sfn ${DIR}/vim/vimrc ${HOME}/.vimrc
-ln -sfn ${DIR}/vim/colour ${HOME}/.vim/colors
-
-cd ~/.vim/pack/plugins/start
-
-clone https://github.com/Cynthion21x/VimExplorer.git
-clone https://github.com/mg979/vim-visual-multi.git
-clone https://github.com/kien/rainbow_parentheses.vim.git
-clone https://github.com/vim-polyglot/vim-polyglot.git
 
 cd ${DIR}
 
@@ -63,6 +37,18 @@ ln -sfn ${DIR}/ghci/.ghci ${HOME}/.ghci
 echo "Install tmux config"
 
 ln -sfn ${DIR}/tmux/.tmux.conf ${HOME}/.tmux.conf
+
+echo "Install gtk"
+
+ln -sfn ${DIR}/gtk ${HOME}/.config/gtk-3.0
+
+echo "Install icons"
+
+cd ${DIR}/Theme/icon-theme/PixelIcons/
+python3 generate.py
+
+mkdir -p ${HOME}/.icons/
+ln -sfn ${DIR}/Theme/icon-theme/PixelIcons/ ${HOME}/.icons
 
 cd ${DIR}
 
