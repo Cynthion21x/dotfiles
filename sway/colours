@@ -1,25 +1,25 @@
-set $bg       #000000
+set $bg       #1a1b26
 set $fg       #ffffff
-set $accent   #d79921
-set $accentd  #fe8019
-set $accent2  #d79921
-set $accent2d #962338
-set $color0   #282828
-set $color1   #cc241d
-set $color2   #98971a
-set $color3   #d79921
-set $color4   #458588
-set $color5   #b16286
-set $color6   #689d6a
-set $color7   #a89984
-set $color8   #928374
-set $color9   #fb4934
-set $color10  #b8bb26
-set $color11  #fabd2f
-set $color12  #83a598
-set $color13  #d3869b
-set $color14  #8ec07c
-set $color15  #ebdbb2
+set $accent   #e0af68
+set $accentd  #c9a260
+set $accent2  #e0af68
+set $accent2d #9d7cd8
+set $color0   #1a1b26
+set $color1   #f7768e
+set $color2   #9ece6a
+set $color3   #e0af68
+set $color4   #7aa2f7
+set $color5   #bb9af7
+set $color6   #7dcfff
+set $color7   #c0caf5
+set $color8   #414868
+set $color9   #ff899d
+set $color10  #b9f27c
+set $color11  #ff9e64
+set $color12  #7da6ff
+set $color13  #c0a7f7
+set $color14  #a4daff
+set $color15  #d5d9f5
 
 # class                  border    backgr.   text     indicator  child_border
 client.focused           $accent   $accent   $bg      $accent2   $accent
@@ -36,7 +36,7 @@ bar {
         separator          $color8
         focused_workspace  $accent  $accent  $bg
         active_workspace   $color0  $color0  $fg
-        inactive_workspace $color0  $color0  $color8
+        inactive_workspace $color0  $color0  $fg
         urgent_workspace   $accent2 $accent2 $bg
     }
 }
