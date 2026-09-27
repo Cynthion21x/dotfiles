@@ -1,42 +1,25 @@
 set $mod Mod4
 
 include ~/.config/sway/colours
+include ~/.config/sway/host
 
-output * bg /home/cynthion/Background/monstercat2.png fill
-
-output eDP-2 position 0 0
-output HDMI-A-1 transform 180
-output HDMI-A-1 position 0 1080
-
-# Autostart
-
-exec foot -s
-exec mako
+output * bg /home/cynthion/.config/sway/background.png fill
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
- #exec swayidle -w \
-#         timeout 300 'swaylock -f -c 000000' \
-#         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#         before-sleep 'swaylock -f -c 000000'
-
-input type:touchpad {
-    events disabled
-    dwt enabled
-    tap enabled
-    natural_scroll enabled
-    middle_emulation enabled
-}
 
 input type:keyboard {
     xkb_layout "gb"
 }
 
+# Autostart
+exec foot -s
+exec mako
+
 # Apps
 bindsym $mod+Return exec footclient
 #bindsym $mod+Return exec ~/dotfiles/sway/launch-foot.sh
 bindsym $mod+d exec wmenu-run
-bindsym $mod+p exec librewolf
+bindsym $mod+p exec librewolf-bin
 bindsym $mod+o exec thunar
 
 # Reload

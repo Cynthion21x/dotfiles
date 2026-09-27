@@ -22,3 +22,5 @@ export COLOR12="7da6ff"   # bright blue
 export COLOR13="c0a7f7"   # bright magenta/purple
 export COLOR14="a4daff"   # bright cyan/aqua
 export COLOR15="d5d9f5"   # bright white
+
+export BACKGROUND="monstercat2.png"

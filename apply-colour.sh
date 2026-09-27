@@ -29,6 +29,19 @@ render() {
 render "$TEMPLATE_DIR/sway-colours.tmpl"   "${DIR}/sway/colours"
 render "$TEMPLATE_DIR/vim-colour.vim.tmpl" "${DIR}/vim/colors/custom.vim"
 render "$TEMPLATE_DIR/foot-theme.ini.tmpl" "${DIR}/foot/foot.ini"
+render "$TEMPLATE_DIR/gtk.css.tmpl" "${DIR}/gtk/gtk.css"
+
+if [ -n "$BACKGROUND" ]; then
+    BG_SRC="${DIR}/Background/${BACKGROUND}"
+    if [ -f "$BG_SRC" ]; then
+        ln -sfn "$BG_SRC" "${DIR}/sway/background.png"
+        echo "linked background '$BACKGROUND'"
+    else
+        echo "missing background image $BG_SRC, skipping" >&2
+    fi
+else
+    echo "no BACKGROUND set in $THEME_FILE, skipping" >&2
+fi
 
 echo "theme '$THEME_NAME' applied."
 
