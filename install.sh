@@ -35,6 +35,9 @@ ln -sfn ${DIR}/vim ${HOME}/.vim
 ln -sfn ${DIR}/vim/vimrc ${HOME}/.vimrc
 cd ${DIR}
 
+echo "Installing emacs"
+ln -sfn ${DIR}/emacs ${HOME}/.emacs.d
+
 echo "Installing sway"
 mkdir -p ${HOME}/.config/
 ln -sfn ${DIR}/sway ${HOME}/.config/sway
@@ -48,6 +51,9 @@ ln -sfn ${DIR}/i3status ${HOME}/.config/i3status
 
 echo "Installing foot"
 ln -sfn ${DIR}/foot ${HOME}/.config/foot
+
+echo "Installing mako"
+ln -sfn ${DIR}/mako ${HOME}/.config/mako
 
 echo "Install ghci conf"
 ln -sfn ${DIR}/ghci/.ghci ${HOME}/.ghci

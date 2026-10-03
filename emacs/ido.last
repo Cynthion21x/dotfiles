@@ -1,0 +1,49 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/cynthion/dotfiles/Colours/" . "template/")
+ ("/home/cynthion/dotfiles/" . "emacs/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/cynthion/dotfiles/emacs/"
+ "/home/cynthion/"
+ "/home/cynthion/dotfiles/sway/"
+ "/home/cynthion/dotfiles/Colours/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "->"
+ "config"
+ "background.png"
+ "theme3.sh"
+ "system-col-theme.el"
+ "theme2.sh"
+ "theme1.sh"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/cynthion/dotfiles/emacs/" (27329 31602 588719 217000) "ido.last" "init.el" "init.el~" "elpa/" "ido.last~" "#init.el#" "system-col-theme.el" "system-col-theme.el~" "auto-save-list/" "../" "./")
+
+ ("/home/cynthion/dotfiles/Colours/" (27329 16089 24068 515000) "theme1.sh" "theme3.sh" "theme2.sh" "template/" "../" "./")
+
+ ("/home/cynthion/dotfiles/sway/" (27329 30649 972269 557000) "wmenu.sh" "config" "background.png" "host" "hosts/" "colours" "../" "./")
+
+ ("/home/cynthion/" (27329 31197 351240 9000) "Desktop/" ".tmux.conf" ".ghci" "Background/" ".vimrc" ".vim/" "Projects/" ".ghc/" ".local/" ".emacs.custom~" "dotfiles/" ".ssh/" ".emacs.custom" "Videos/" "Templates/" "Documents/" ".emacs.d/" ".java/" "Music/" ".gitconfig" ".bash_history" ".oracle_jre_usage/" "Public/" "media/" ".debug/" ".android/" ".icons/" "Downloads/" ".viminfo" "Pictures/" ".config/" ".cache/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
+
+ ("/home/cynthion/dotfiles/" (27329 17269 854137 324000) "mako/" "apply-colour.sh" "emacs/" "install.sh" "unlink.sh" "gtk/" "Theme/" "Colours/" "tmux/" "ghci/" "foot/" "i3status/" ".gitignore" "vim/" "sway/" "Background/" ".git/" "../" "./")
+
+ ("/home/cynthion/dotfiles/Colours/template/" (27328 6777 339317 730000) "theme.el.tmpl" "gtk.css.tmpl" "vim-colour.vim.tmpl" "sway-colours.tmpl" "foot-theme.ini.tmpl" "../" "./")
+
+ ("/home/cynthion/dotfiles/Theme/" (27245 3623 461794 635000) "icon-theme/" "../" "./")
+
+ ("/home/cynthion/.emacs.d/" (27328 6606 444014 651000) "system-col-theme.el" "auto-save-list/" "init.el" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

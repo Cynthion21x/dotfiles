@@ -1,25 +1,25 @@
-set $bg       #1a1b26
-set $fg       #ffffff
-set $accent   #e0af68
-set $accentd  #c9a260
-set $accent2  #e0af68
-set $accent2d #9d7cd8
-set $color0   #1a1b26
-set $color1   #f7768e
-set $color2   #9ece6a
-set $color3   #e0af68
-set $color4   #7aa2f7
-set $color5   #bb9af7
-set $color6   #7dcfff
-set $color7   #c0caf5
-set $color8   #414868
-set $color9   #ff899d
-set $color10  #b9f27c
-set $color11  #ff9e64
-set $color12  #7da6ff
-set $color13  #c0a7f7
-set $color14  #a4daff
-set $color15  #d5d9f5
+set $bg       #060906
+set $fg       #e6f2e6
+set $accent   #55eb34
+set $accentd  #3bb01f
+set $accent2  #55eb34
+set $accent2d #1b5510
+set $color0   #060906
+set $color1   #ff5f56
+set $color2   #55eb34
+set $color3   #e3c565
+set $color4   #4fa3e0
+set $color5   #a78bda
+set $color6   #3fd7c4
+set $color7   #c8d8c8
+set $color8   #4d7347
+set $color9   #ff7b72
+set $color10  #8ff56f
+set $color11  #f0d878
+set $color12  #7ab8f0
+set $color13  #c4a8ee
+set $color14  #6fe8d8
+set $color15  #ffffff
 
 # class                  border    backgr.   text     indicator  child_border
 client.focused           $accent   $accent   $bg      $accent2   $accent
@@ -30,6 +30,7 @@ client.urgent            $accent2d $accent2d $bg      $accent2   $accent2
 bar {
     position bottom
     status_command i3status
+    font pango:Iosevka 11
     colors {
         background         $bg
         statusline         $fg

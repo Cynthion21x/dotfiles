@@ -11,6 +11,8 @@ input type:keyboard {
     xkb_layout "gb"
 }
 
+font pango:Iosevka 11
+
 # Autostart
 exec foot -s
 exec mako
@@ -18,7 +20,8 @@ exec mako
 # Apps
 bindsym $mod+Return exec footclient
 #bindsym $mod+Return exec ~/dotfiles/sway/launch-foot.sh
-bindsym $mod+d exec wmenu-run
+#bindsym $mod+d exec wmenu-run
+bindsym $mod+d exec ~/dotfiles/sway/wmenu.sh
 bindsym $mod+p exec librewolf-bin
 bindsym $mod+o exec thunar
 

@@ -1,10 +1,11 @@
 export BG="1a1b26"        # background
+export BG_DARK="0d0f14"         
 export FG="ffffff"        # foreground
 
 export ACCENT="e0af68"
 export ACCENT_DARK="c9a260"
 export ACCENT2="bb9af7"
-export ACCENT2_DARK="9d7cd8"
+export ACCENT2_DARK="6b4ca1"
 
 export COLOR0="1a1b26"    # black
 export COLOR1="f7768e"    # red

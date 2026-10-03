@@ -1,0 +1,37 @@
+;;; -*- lexical-binding: t; -*-
+
+(setq custom-file "~/.emacs.custom")
+(load custom-file 'noerror 'nomessage)
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(global-display-line-numbers-mode 1)
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+(setq inhibit-startup-screen t)
+(setq display-line-numbers-type 'visual)
+
+(global-set-key (kbd "C-=") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease) 
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/")
+(load-theme 'system-col t)
+
+(set-face-attribute 'default nil :family "Iosevka" :height 120)
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+
+(setq use-package-always-ensure t)
+
+(use-package which-key
+  :config
+  (which-key-mode 1))
+
+(use-package magit
+  :bind ("C-x g" . magit-status))
