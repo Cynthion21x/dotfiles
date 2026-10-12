@@ -2,16 +2,16 @@
 
 (deftheme system-col "Auto Generated")
 
-(let ((bg      "#060906")
-      (fg      "#e6f2e6")
-      (bg2     "#000000")
-      (accent  "#55eb34")
-      (accentd  "#3bb01f")
-      (accent2 "#2a8019")
-      (accent2d "#1b5510")
-      (c0  "#060906")  (c1  "#ff5f56")  (c2  "#55eb34")  (c3  "#e3c565")
-      (c4  "#4fa3e0")  (c5  "#a78bda")  (c6  "#3fd7c4")  (c7  "#c8d8c8")
-      (c8  "#4d7347"))
+(let ((bg      "#1a1b26")
+      (fg      "#ffffff")
+      (bg2     "#0d0f14")
+      (accent  "#e0af68")
+      (accentd  "#c9a260")
+      (accent2 "#bb9af7")
+      (accent2d "#6b4ca1")
+      (c0  "#1a1b26")  (c1  "#f7768e")  (c2  "#9ece6a")  (c3  "#e0af68")
+      (c4  "#7aa2f7")  (c5  "#bb9af7")  (c6  "#7dcfff")  (c7  "#c0caf5")
+      (c8  "#414868"))
   (custom-theme-set-faces
    'system-col
    ;; basics

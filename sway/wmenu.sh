@@ -1,8 +1,8 @@
 #!/bin/sh
 exec wmenu-run -i \
-  -f 'monospace 14' \
-  -N '#060906' -n '#e6f2e6' \
-  -M '#060906' -m '#55eb34' \
-  -S '#2a8019' -s '#ffffff' \
+  -f 'Fira Code 16' \
+  -N '#1a1b26' -n '#ffffff' \
+  -M '#1a1b26' -m '#e0af68' \
+  -S '#bb9af7' -s '#ffffff' \
   -b \
   "$@"

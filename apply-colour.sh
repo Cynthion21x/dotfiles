@@ -50,3 +50,6 @@ echo "theme '$THEME_NAME' applied."
 
 sway reload
 
+pkill -f "foot --server"
+exec foot --server
+makoctl reload

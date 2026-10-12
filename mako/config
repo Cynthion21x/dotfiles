@@ -1,7 +1,7 @@
-background-color=#060906
-text-color=#e6f2e6
-border-color=#55eb34
-progress-color=over #2a8019
+background-color=#1a1b26
+text-color=#ffffff
+border-color=#e0af68
+progress-color=over #bb9af7
 
 border-size=2
 border-radius=0
@@ -11,9 +11,11 @@ width=350
 anchor=top-right
 default-timeout=5000
 
+font=Fira Code 12
+
 [urgency=low]
-border-color=#4d7347
+border-color=#414868
 
 [urgency=high]
-border-color=#ff5f56
+border-color=#f7768e
 default-timeout=0

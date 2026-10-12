@@ -11,7 +11,7 @@ input type:keyboard {
     xkb_layout "gb"
 }
 
-font pango:Iosevka 11
+font pango:Fira Code 11
 
 # Autostart
 exec foot -s
