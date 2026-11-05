@@ -47,6 +47,7 @@
 (yas-global-mode 1)
 
 ;; programming modes
+
 (use-package auctex)
 (use-package sly)
 (use-package haskell-mode)
@@ -80,6 +81,7 @@
 ))
 
 ;; Functions
+
 (defun my/select-line ()
   (interactive)
   (beginning-of-line)
@@ -87,7 +89,29 @@
   (forward-line 1)
   (backward-char))
 
+(defun org-babel-execute:sbcl (body params)
+  "Run BODY with `sbcl --script` and return its output."
+  (let ((file (make-temp-file "ob-sbcl" nil ".lisp")))
+    (with-temp-file file (insert body))
+    (unwind-protect
+        (org-babel-eval (format "sbcl --script %s" file) "")
+      (delete-file file))))
+
+;; Config
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (python . t)
+   (lisp . t)
+   (C . t)
+   (fortran . t)
+   (shell . t)))
+
+(add-to-list 'org-src-lang-modes '("sbcl" . lisp))
+
 ;; Keybinds
+
+(require 'bind-key)
 
 (global-set-key (kbd "C-z") #'my/select-line)
 (global-set-key (kbd "C-=") 'text-scale-increase)
@@ -97,5 +121,9 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-(global-set-key (kbd "M-p") 'move-text-up)
-(global-set-key (kbd "M-n") 'move-text-down)
+(bind-key* "M-p" 'move-text-up)
+(bind-key* "M-n" 'move-text-down)
+
+(load "~/private.el")
+(put 'upcase-region 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)

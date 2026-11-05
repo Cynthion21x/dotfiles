@@ -5,3 +5,5 @@
 \#*\#
 /emacs/elpa/
 /emacs/auto-save-list
+/emacs/ido.last
+/build/

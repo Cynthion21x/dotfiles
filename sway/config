@@ -7,9 +7,9 @@ output * bg /home/cynthion/.config/sway/background.png fill
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-input type:keyboard {
-    xkb_layout "gb"
-}
+#input type:keyboard {
+#    xkb_layout "gb"
+#}
 
 font pango:Fira Code 11
 
@@ -98,9 +98,6 @@ bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-
-bindsym --locked F7 exec light -U 5
-bindsym --locked F8 exec light -A 5
 
 bindsym Print exec grim -s 1 - | screen-freeze | wl-copy
 bindsym $mod+e exec grim -s 1 - | screen-freeze -z
